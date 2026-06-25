@@ -1,6 +1,6 @@
 import { useState, MouseEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ChevronLeft, ChevronRight, Play, Zap, Cpu, Sparkles, Bot, Workflow, Terminal, MessageSquare } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Play, Zap, Cpu, Sparkles, Bot, Workflow, Terminal, MessageSquare, Github, ArrowUpRight } from 'lucide-react';
 import { PROJECTS } from '../constants';
 import { Category } from '../types';
 import SectionHeading from './SectionHeading';
@@ -140,6 +140,22 @@ export default function ProjectGrid({ activeCategory }: ProjectGridProps) {
               <p className="text-brand-black/70 text-base md:text-lg leading-relaxed pt-8 border-t border-brand-black/5">
                 I have hands-on experience working with tools such as n8n, Google AI Studio, ChatGPT, and Claude, which I use to automate repetitive tasks, generate content, and improve overall productivity.
               </p>
+
+              {/* Botón de enlace a GitHub */}
+              <div className="pt-4 flex justify-start">
+                <motion.a 
+                  href="https://github.com/ddoncelnavia-design"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-brand-black text-white hover:bg-brand-emerald hover:text-white transition-all rounded-full font-black text-[11px] md:text-[12px] tracking-[0.2em] md:tracking-[0.4em] uppercase shadow-lg group"
+                >
+                  <Github size={16} />
+                  View Developments on GitHub
+                  <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                </motion.a>
+              </div>
             </div>
           </motion.div>
 
